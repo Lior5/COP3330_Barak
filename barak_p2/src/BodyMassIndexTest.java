@@ -1,22 +1,36 @@
-public class BodyMassIndex{
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
-    //BMI = 703 * pounds / inches^2
-    double height_in_inches, weight;
-    double BMI_value;
+public class BodyMassIndexTest{
 
-    public BodyMassIndex(double h, double w){
-        height_in_inches = h;
-        weight = w;
+    @Test
+    public void testUnderweightBMI(){
+        BodyMassIndex bmi = new BodyMassIndex(74,125);
+        String category = bmi.getBMICategory();
+        assertEquals("Underweight",category);
     }
-    public double calculateBMI(){
-        return (BMI_value = (703 * weight) / (height_in_inches * height_in_inches));
+    @Test
+    public void testNormalweightBMI(){
+        BodyMassIndex bmi = new BodyMassIndex(70,135);
+        String category = bmi.getBMICategory();
+        assertEquals("Normal weight",category);
     }
-    public String getBMICategory() {
-        double bmi = calculateBMI();
-        if (bmi < 18.5) return "Underweight";
-        if (bmi < 25) return "Underweight";
-        if (bmi < 30) return "Overweight";
-        return "Obesity";
+    @Test
+    public void testOverweightBMI(){
+        BodyMassIndex bmi = new BodyMassIndex(63,155);
+        String category = bmi.getBMICategory();
+        assertEquals("Overweight",category);
     }
-    
+    @Test
+    public void testObeseBMI(){
+        BodyMassIndex bmi = new BodyMassIndex(25,300);
+        String category = bmi.getBMICategory();
+        assertEquals("Obese",category);
+    }
+    @Test
+    public void testBMICalculator(){
+        BodyMassIndex bmi = new BodyMassIndex(100,100);
+        assertEquals(7.0,bmi.calculateBMI());
+    }
+
 }
