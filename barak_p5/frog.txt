@@ -1,7 +1,0 @@
-Save format is as follows: First line is the item index, second line is the title, third line is the description, fourth line is the due date, fifth line is completion (true or false)
-Number of items is 1
-0
-yessir
-yessir
-2222-11-11
-true
