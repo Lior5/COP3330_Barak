@@ -1,0 +1,12 @@
+Save format is as follows: First line is the item index, second line is the first name, third line is the last name, fourth line is the phone number, fifth line is email address
+Number of items is 2
+0
+yo
+yoo
+312-320-1230
+oo@y.com
+1
+mm
+mmmmm
+333-333-3333
+hehe@hehe.hehehe

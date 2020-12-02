@@ -1,0 +1,7 @@
+Save format is as follows: First line is the item index, second line is the first name, third line is the last name, fourth line is the phone number, fifth line is email address
+Number of items is 1
+0
+4
+7
+888-888-8888
+88@88.n
